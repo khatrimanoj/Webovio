@@ -12,21 +12,40 @@ header {
   height: 100%;
   background: url(../src/images/Hero-Banner.png) no-repeat;
   background-size: cover;
-  padding: 40px 0;
+  background-position: center;
+}
+.black-transparent::before {
+  height: 80px;
+}
+header.black-transparent nav {
+  padding: 20px 0;
+}
+header::before {
+  content: '';
+  position: fixed;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  right: 0;
+  background: rgba(106, 118, 86, 0.85);
+  z-index: 8;
+  transition: height .3s all ease-in-out;
+  transition: var(--mainTransition);
 }
 /* ---- Menu css start here ---- */
 .nav-toggle-btn {
   opacity: 1;
   background-color: transparent;
   position: absolute;
-  z-index: 2;
-  right: 0px;
+  z-index: 3;
+  right: 30px;
   border: none;
   width: 0;
   height: 0;
   outline: none;
-  -webkit-transition: opacity 0.2s ease-out;
-  transition: opacity 0.2s ease-out;
+  cursor: pointer;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
 }
 
 .nav-toggle-btn:before {
@@ -41,8 +60,8 @@ header {
   width: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(#98B296), color-stop(20%, #98B296), color-stop(20%, transparent), color-stop(40%, transparent), color-stop(40%, #98B296), color-stop(60%, #98B296), color-stop(60%, transparent), color-stop(80%, transparent), color-stop(80%, #98B296), to(#98B296));
   background: linear-gradient(to bottom, #98B296, #98B296 20%, transparent 20%, transparent 40%, #98B296 40%, #98B296 60%, transparent 60%, transparent 80%, #98B296 80%, #98B296 100%);
-  -webkit-transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
-  transition: opacity 0.2s ease-out, width 0.2s 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-in-out, width 0.2s 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, width 0.2s 0.2s ease-in-out;
 }
 .nav-toggle-btn:after {
   opacity: 0;
@@ -51,10 +70,9 @@ header {
   position: absolute;
   top: 1px;
   left: 6px;
-  font-family: Arial, sans-serif;
   font-size: 42px;
   line-height: 0;
-  transition: opacity 0.4s ease-out;
+  transition: opacity 0.4s ease-in-out;
   background-color: #fff;
   border-radius: 50px;
   width: 40px;
@@ -79,10 +97,10 @@ header {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0) rotate(360deg);
           transform: translate3d(0, 0, 0) rotate(360deg);
-  -webkit-transition: opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
-  transition: opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
-  transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out;
-  transition: transform 0.4s 1s ease-out, opacity 0.4s 1s ease-out, -webkit-transform 0.4s 1s ease-out;
+  -webkit-transition: opacity 0.4s 1s ease-in-out, -webkit-transform 0.4s 1s ease-in-out;
+  transition: opacity 0.4s 1s ease-in-out, -webkit-transform 0.4s 1s ease-in-out;
+  transition: transform 0.4s 1s ease-in-out, opacity 0.4s 1s ease-in-out;
+  transition: transform 0.4s 1s ease-in-out, opacity 0.4s 1s ease-in-out, -webkit-transform 0.4s 1s ease-in-out;
 }
 
 nav {
@@ -92,7 +110,12 @@ nav {
   max-width: 1166px;
   display: flex;
   justify-content: space-between;
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  z-index: 9;
+  transition: .2s all ease-in-out;
 }
 .navigation {
   position: relative;
@@ -112,6 +135,7 @@ nav {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   overflow: hidden;
+  z-index: 2;
 }
 .navigation .nav-links:before {
   content: '';
@@ -121,7 +145,7 @@ nav {
   bottom: 0;
   left: 0;
   margin: auto;
-  background: rgba(123, 156, 121, 0.98);
+  background: rgba(79, 85, 61, 0.94);
   width: 100%;
   height: 0;
   padding-bottom: 100%;
@@ -134,8 +158,8 @@ nav {
   top: 0;
 }
 .navigation .nav-links.show-nav:before {
-  -webkit-animation: menu-animation 0.8s ease-out forwards;
-          animation: menu-animation 0.8s ease-out forwards;
+  -webkit-animation: menu-animation 0.8s ease-in-out forwards;
+          animation: menu-animation 0.8s ease-in-out forwards;
 }
 .navigation .nav-links ul {
   position: fixed;
@@ -160,10 +184,10 @@ nav {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
           transform: translate3d(0, 0, 0);
-  -webkit-transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out, -webkit-transform 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
 }
 .navigation .nav-links.show-nav ul li:nth-child(1) {
   -webkit-transition-delay: 0.75s;
@@ -182,9 +206,30 @@ nav {
           transition-delay: 1.05s;
 }
 .navigation ul li a {
-  font-size: 16px;
-  font-family: 'PoppinsRegular';
-  color: var(--lighte-green);
+  font-size: 28px;
+  color: var(--lighter-green);
+  font-weight: 600;
+  transition: var(--mainTransition);
+  position: relative;
+}
+.navigation ul li a:hover {
+  color: var(--yellow);
+}
+.navigation ul li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0;
+  opacity: 0;
+  border: 2px solid var(--yellow);
+  bottom: -10px;
+  transition: width .3s ease-in-out;
+}
+.navigation ul li a:hover::after {
+  width: 100%;
+  opacity: 1;
 }
 
 @-webkit-keyframes menu-animation {
@@ -196,8 +241,8 @@ nav {
   40% {
     -webkit-transform: scale(0.04) translateY(0);
             transform: scale(0.04) translateY(0);
-    -webkit-transition: ease-out;
-    transition: ease-out;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
   }
   40% {
     -webkit-transform: scale(0.04) translateY(0);
@@ -235,8 +280,8 @@ nav {
   40% {
     -webkit-transform: scale(0.04) translateY(0);
             transform: scale(0.04) translateY(0);
-    -webkit-transition: ease-out;
-    transition: ease-out;
+    -webkit-transition: ease-in-out;
+    transition: ease-in-out;
   }
   40% {
     -webkit-transform: scale(0.04) translateY(0);
@@ -273,6 +318,17 @@ nav {
   display: flex;
   align-items: center;
 }
+.header-content .sub-title {
+  color: var(--white-color);
+}
+.header-content .main-title {
+  font-size: 60px;
+  line-height: 72px;
+  color: var(--white-color);
+}
+.header-content .desc {
+  color: var(--white-color);
+}
 .sub-title {
   font-size: 14px;
   line-height: 20px;
@@ -280,8 +336,8 @@ nav {
   display: inline-block;
 }
 .main-title {
-  font-size: 60px;
-  line-height: 72px;
+  font-size: 36px;
+  line-height: 46px;
 }
 .hero-text {
   max-width: 610px;

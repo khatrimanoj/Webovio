@@ -24,8 +24,26 @@ body {
   margin: 0;
   height: 100%;
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
 h1,h2,h3,h4,h5,h6,p {
   margin: 0;
+}
+.white-empty-overlay {
+  background-color: #fbfbfb;
+  position: absolute;
+  top: -90px;
+  right: -100%;
+  width: 100%;
+  display: flex;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+  padding: 100px;
+  z-index: 1;
+}
+.white-empty-overlay::after {
+  content: '';
+  position: relative;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+  background-color: #fff;
 }

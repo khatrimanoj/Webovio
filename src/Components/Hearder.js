@@ -4,15 +4,39 @@ import MenuToggle from '../images/menu-toggle-icon.png';
 
 class Hearder extends Component {
     state = {
-        isOpen: false
+        isOpen: false,
+        className: ""
+    }
+  
+    componentDidMount(){
+        window.addEventListener("scroll", this.handleScroll);
+    }
+  
+    handleScroll=()=>{
+        if (window.pageYOffset > 0) {
+            if(!this.state.className){
+            this.setState({ className: "black-transparent" });   
+            }
+        }else{
+            if(this.state.className){
+            this.setState({ className: "" });
+            }
+        }
+    
     }
     handleToggle = () => {
         this.setState({isOpen:!this.state.isOpen})
     }
     render() {
+        const HeroContent = {
+            subTitle: `Digital Design Studio`,
+            mainTitle: `A creative agency for Innovative ideas`,
+            Desc: `We are the answer for both the individual needs of clients as well as complete projects - from idea to execution.`,
+
+        }
         return (
-            <header>
-                <nav>
+            <header className={this.state.className}>
+                <nav >
                     <div className="brand-name">
                         <a href="#">
                             <img src={Logo} alt="Webovio" />
@@ -32,10 +56,10 @@ class Hearder extends Component {
                 <div className="header-content">
                     <div className="container">
                         <div className="hero-text">
-                            <span className="sub-title text-white">Digital Design Studio</span>
-                            <h1 className="main-title text-white">A creative agency for Innovative ideas</h1>
-                            <p className="desc text-white">We are the answer for both the individual needs of clients as well as complete projects - from idea to execution.</p>
-                            <button class="btn btn-yellow text-white">Get Started</button>
+                            <span className="sub-title text-white">{HeroContent.subTitle}</span>
+                            <h1 className="main-title text-white">{HeroContent.mainTitle}</h1>
+                            <p className="desc text-white">{HeroContent.Desc}</p>
+                            <button className="btn btn-yellow text-white">Get Started</button>
                         </div>
                     </div>
                 </div>

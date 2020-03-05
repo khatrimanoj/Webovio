@@ -20,9 +20,10 @@ class Clients extends Component {
                             <li><img src={client4} alt="client4" /></li>
                             <li><img src={client5} alt="client5" /></li>
                         </ul>
+                        <div className="white-empty-overlay"></div>
                     </div>
                 </div>
-                {/* <Carousel showArrows={true} >
+                {/* <Carousel showArrows={true} showThumbs="false">
                     <div>
                         <img src={client1} alt="client 1" />
                     </div>

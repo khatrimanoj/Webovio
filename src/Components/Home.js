@@ -3,6 +3,7 @@ import ClientCarousel from '../Components/Clients';
 import WhatWeDo from '../Components/WhatWeDo';
 import ProductIdea from '../Components/ProductIdea';
 import ProjectsSection from '../Components/Projecs';
+import GetStarted from '../Components/GetStarted';
 
 class Home extends Component {
     render() {
@@ -18,6 +19,7 @@ class Home extends Component {
                     <hr></hr>
                 </div>
                 <ProductIdea />
+                <GetStarted />
             </>
         );
     }

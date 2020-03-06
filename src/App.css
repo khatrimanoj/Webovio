@@ -14,7 +14,9 @@
 }
 hr {
   border: 1px solid rgba(33, 56, 66, 0.0955529);
-  margin: 150px 0;
+  margin: 120px 0;
+  width: 100%;
+  float: left;
 }
 .container {
   width: 1166px;
@@ -131,7 +133,6 @@ hr {
   width: 100%;
   float: left;
   position: relative;
-  padding: 100px 0;
 }
 .what-we-do .flex-div {
   width: 100%;
@@ -141,9 +142,9 @@ hr {
   justify-content: space-between;
 }
 .what-we-do article {
-  max-width: 475px;
-  padding: 100px 0;
-  display: inline-block
+  max-width: 470px;
+  padding: 200px 0 0;
+  display: inline-block;
 }
 .what-we-do article span {
   display: inline-block;
@@ -194,5 +195,142 @@ hr {
   width: 100%;
   float: left;
   position: relative;
+  padding-bottom: 150px;
+}
+.product-idea ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+.product-idea ul li {
+  flex: 0 1 21.6777%;
+  padding: 30px;
+}
+.product-idea ul li .product-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 20px;
+  color: var(--light-green);
+  white-space: pre-line;
+}
+.product-idea ul li .product-desc {
+  font-size: 14px;
+  line-height: 26px;
+  color: var(--light-gray);
 }
 /* ---- product idea css end ----- */
+/* ---- project section css start ----- */
+.awesome-projects {
+  width: 100%;
+  float: left;
+  position: relative;
+}
+.awesome-projects .heading {
+  width: 100%;
+  float: left;
+  display: flex;
+  justify-content: flex-start;
+}
+.awesome-projects .heading .main-title {
+  flex: 0 1 39%;
+}
+.awesome-projects .heading .desc {
+  max-width: 510px;
+}
+.awesome-projects .project-list {
+  width: 100%;
+  float: left;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.awesome-projects .project-list .projects {
+  width: 100%;
+  float: left;
+  MARGIN: 80px 0;
+  position: relative;
+  display: flex;
+  height: 685px;
+}
+.awesome-projects .project-list .projects article {
+  flex: 0 1 50%;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial {
+  width: 100%;
+  float: left;
+  display: flex;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .snapshot {
+  width: 100%;
+  float: left;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .snapshot .product-img {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  top: 0;
+  bottom: 0;
+  Z-INDEX: 0;
+  BACKGROUND-SIZE: cover !IMPORTANT;
+}
+.awesome-projects .project-list .projects.even .snapshot .product-img {
+  left: unset;
+  right: 0;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .snapshot img {
+  width: 100%;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial {
+  position: absolute;
+  bottom: -60px;
+  BACKGROUND-COLOR: #FFFFFF;
+  box-shadow: 50px 50px 100px rgba(0, 0, 0, 0.145947);
+  border-radius: 8px;
+  max-width: 450px;
+  padding: 30px;
+  Z-INDEX: 9999;
+  RIGHT: -50px;
+}
+.awesome-projects .project-list .projects.even .snapshot-testimonial .testimonial {
+  right: unset;
+  left: -40px;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial span {
+  display: inline-block;
+  vertical-align: middle;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial p.desc {
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--light-green);
+  margin-top: 0;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial .info {
+  display: flex;
+  width: 100%;
+  float: left;
+  margin-top: 25px;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial .info span.avtar {
+  padding-right: 15px;
+}
+.awesome-projects .project-list .projects .snapshot-testimonial .testimonial .info span.avtar img {
+  width: 46px;
+  height: 46px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.awesome-projects .project-list .projects .project-info {
+  MAX-width: 475PX;
+  float: right;
+  position: relative;
+}
+.awesome-projects .project-list .projects.even .project-info {
+  float: left;
+}
+/* ---- projects section css end ----- */

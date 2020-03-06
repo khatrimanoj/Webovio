@@ -9,13 +9,14 @@ class ProductIdea extends Component {
             ProductItems:[]
         };
     }
+    
     componentWillMount() {
         this.setState({
             ProductItems: [
                 {
                     id: 1,
-                    title: "Product Design Sprint",
-                    desc: "Product Design Sprint",
+                    title: "Product\nDesign Sprint",
+                    desc: "A five-day workshop that will help you answer crucial business questions",
                     button: "Read More"
                 },
                 {
@@ -26,13 +27,13 @@ class ProductIdea extends Component {
                 },
                 {
                     id: 3,
-                    title: "UX Review",
+                    title: "UX\nReview",
                     desc: "An evaluation which will help you radically improve your product.",
                     button: "Read More"
                 },
                 {
                     id: 4,
-                    title: "Code Review",
+                    title: "Code\nReview",
                     desc: "Do you know what one of the key secrets of success is what makes people successful in business.",
                     button: "Read More"
                 }
@@ -45,9 +46,13 @@ class ProductIdea extends Component {
                 <div className="container">
                     <h1 className="main-title">{this.state.title}</h1>
                     <ul>
-                        {this.props.ProductItems.map((ProductItems, key) =>(
-                            <li key={key}>{ProductItems.title}</li>
-                          ))}
+                        {this.state.ProductItems.map((ProductItems) =>
+                            <li key={ProductItems.id}>
+                                <h1 className="product-title">{ProductItems.title}</h1>
+                                <p className="product-desc">{ProductItems.desc}</p>
+                                <a href="#" className="btn btn-underline">{ProductItems.button}</a>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </section>
